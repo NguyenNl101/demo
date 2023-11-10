@@ -1,0 +1,82 @@
+/* Reset các margin và padding mặc định của trình duyệt */
+body, h2, h3, form {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* Chọn font chữ thích hợp */
+    background-color: #f4f4f4; /* Màu nền của trang */
+    padding: 20px; /* Khoảng cách giữa nội dung và mép trang */
+}
+
+h2, h3 {
+    color: #333; /* Màu chữ cho tiêu đề */
+}
+
+form {
+    margin-bottom: 20px; /* Khoảng cách giữa form và tiêu đề danh sách sinh viên */
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"] {
+    padding: 8px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box; /* Đảm bảo kích thước của input bao gồm cả phần padding và border */
+}
+
+button {
+    padding: 10px;
+    background-color: #4caf50; /* Màu nền của nút */
+    color: white; /* Màu chữ của nút */
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049; /* Màu nền khi di chuột qua nút */
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+    background-color: white; /* Màu nền của bảng */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hiệu ứng đổ bóng */
+}
+
+th, td {
+    border: 1px solid #ddd; /* Đường biên cho ô */
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #4caf50; /* Màu nền cho ô tiêu đề */
+    color: white; /* Màu chữ cho ô tiêu đề */
+}
+
+input#searchInput {
+    padding: 8px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Tạo hiệu ứng khi hover vào các nút trong ô hành động */
+td button {
+    padding: 5px;
+    margin-right: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+td button:hover {
+    background-color: #ddd;
+}

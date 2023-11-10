@@ -1,0 +1,268 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+  }
+  
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+  
+  .header h1 {
+    margin: 0;
+  }
+  
+  .custom-search-section {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 25px;
+    width: 300px;
+    background-color: #fff;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+  
+    margin-right: 10px;
+  }
+  
+  .top-right {
+    display: flex;
+  }
+  
+  #teacher-docs-button {
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 20px;
+    width: 260px;
+    height: 53px;
+    border-radius: 25px;
+    background-color: #ffa500;
+    color: white;
+    display: flex;
+    border: none;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  #custom-search-input {
+    flex-grow: 1;
+    padding: 3px 7px;
+    border: none;
+    border-radius: 25px 0 0 25px;
+    outline: none;
+    font-size: 20px;
+  }
+  
+  #custom-search-icon {
+    padding: 3px 7px;
+    border-radius: 0 25px 25px 0;
+    font-size: 1rem;
+    margin-left: -4px;
+  }
+  .menu-icon {
+    margin-right: 5px;
+    background-color: #a0522d;
+    padding: 3px;
+    border-radius: 5px;
+  }
+  .navbar {
+    background-color: orange;
+    overflow: visible;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: relative;
+  
+    z-index: 1000;
+  }
+  .navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  .navbar a:hover {
+    background-color: darkgoldenrod;
+    padding: 12px auto;
+  }
+  /* Style for the dropdown content */
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  /* Style for the dropdown content when hidden */
+  .dropdown-content {
+    grid-template-columns: repeat(3, 1fr); /* Chia thành 3 cột đều nhau */
+    gap: 10px;
+    padding: 10px;
+    min-width: 100vw;
+    position: absolute;
+    top: 45px;
+    width: 100%;
+    left: 0;
+    display: none;
+    height: auto;
+    background-color: darkgoldenrod;
+  }
+  /* Style for the dropdown links */
+  .dropdown-content a {
+    float: none;
+    color: white;
+    padding: 12px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-size: 16px;
+  }
+  
+  /* Hover effect for dropdown links */
+  .dropdown-content a:hover {
+    padding: 12px;
+    background-color: orange;
+  }
+  
+  /* Show the dropdown content on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  .columnt {
+    display: inline-block;
+    vertical-align: top;
+  }
+  /* Style chung cho tất cả các liên kết */
+  a {
+    text-decoration: none; /* Bỏ gạch chân */
+    color: black; /* Màu chữ */
+    display: block; /* Hiển thị dưới dạng block để mỗi link nằm trên một hàng riêng */
+    margin-bottom: 5px; /* Khoảng cách giữa các link */
+    transition: color 0.3s; /* Hiệu ứng chuyển màu khi hover */
+  }
+  
+  /* Thay đổi màu khi hover */
+  
+  /* Style cho các tiêu đề cột */
+  .column h3 {
+    margin: 0;
+    padding-bottom: 10px; /* Khoảng cách giữa tiêu đề và các link bên dưới */
+    font-size: 16px; /* Cỡ chữ cho tiêu đề */
+    color: #333; /* Màu sắc cho tiêu đề */
+    font-weight: normal; /* Độ đậm của tiêu đề */
+  }
+  
+  /* Style cho các cột, như đã mô tả ở trên */
+  .column {
+    float: left;
+    width: 25%;
+    padding: 5px;
+    box-sizing: border-box;
+  }
+  
+  .panel::after {
+    display: table;
+    clear: both;
+  }
+  
+  .panel {
+    display: none; /* Panel sẽ được hiển thị khi nhấn vào accordion */
+    background: #f1f1f1;
+    padding: 10px;
+  }
+  
+  /* Style cho nút accordion khi active */
+  .accordion.active .fa-chevron-down {
+    transform: rotate(180deg);
+  }
+  
+  .navbar {
+    align-self: flex-start;
+    vertical-align: top;
+  }
+  
+  .content {
+    left: 30px;
+    padding-right: 210px;
+    position: relative;
+    align-items: flex-start;
+    padding-left: 150px;
+  }
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .fa-chevron-down {
+    font-size: 20px;
+    float: right;
+  }
+  
+  .panel {
+    padding: 0;
+    background: #f2f2f2;
+    display: none;
+    overflow: hidden;
+  }
+  
+  .accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    position: relative;
+    z-index: 999;
+  }
+  
+  .accordion.active,
+  .accordion:hover {
+    background-color: #ccc;
+  }
+  
+  .navbar .dropdown-menu {
+    position: absolute;
+    z-index: 1000;
+  }
+  .navbar {
+    position: relative;
+    z-index: 1000;
+  }
+  
+  .navbar:hover + .accordion {
+    margin-top: 100px;
+  }
+  
+  /* Thêm vào file CSS của bạn */
+  .accordion:hover {
+    color: #0101df; /* Màu xanh nước biển */
+    cursor: pointer; /* Cho biết có thể click */
+  }
+  
+  /* Bạn cũng có thể thêm hiệu ứng chuyển đổi mượt mà */
+  .accordion {
+    transition: color 0.3s ease-in-out;
+  }
+  strong {
+    color: green;
+  }
+  /* Phong cách chung cho các accordion và panel */
+  .accordion {
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    height: 40px;
+    line-height: 30px;
+    font-weight: bolder;
+  }
+  .accordion a {
+    font-size: 14px;
+  }
+  .fa-chevron-down {
+    padding: 0 5px;
+  }
+  
