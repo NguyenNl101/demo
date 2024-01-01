@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: "Lato", sans-serif;
+        }
+
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidebar a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            color: #f1f1f1;
+        }
+
+        .sidebar .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        .openbtn {
+            font-size: 20px;
+            cursor: pointer;
+            background-color: #111;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+        }
+
+        .openbtn:hover {
+            background-color: #444;
+        }
+
+        #main {
+            transition: margin-left .5s;
+            padding: 16px;
+        }
+
+        /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+        @media screen and (max-height: 450px) {
+            .sidebar {
+                padding-top: 15px;
+            }
+
+            .sidebar a {
+                font-size: 18px;
+            }
+        }
+
+        #member-list {
+            display: none;
+            width: 500px;
+            height: 500px;
+            overflow: auto;
+        }
+    </style>
+    <title></title>
+</head>
+
+<body>
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a> <a href="#" onclick="showMemberList()">Week5</a>
+    </div>
+    <div id="main">
+        <button class="openbtn" onclick="openNav()">Group Diary</button>
+        <div id="member-list">
+            <p>stt 1.Phương Phi Long mssv: 22130153 công việc: làm đánh giá cho trang sau ngày bắt đầu tuần 13 ngày kết thúc tuần 14</p>
+            <p>stt 2.Bùi Nguyễn Quang Vinh mssv: 2130324 công việc test các chức năng và fix bug ngày bắt đầu tuần 13 ngày kết thúc tuần 14</p>
+            <p>stt 3.Nguyễn Thành Luân mssv: 22130155 công việc: làm button collapse cho các lớp ở trang đầu ngày bắt đầu tuần 13 ngày kết thúc tuần 14</p>
+            <p>stt 4.Nguyễn Lê Hoàng Khang mssv: 22130116 công việc: làm navbar ở trang đầu ngày bắt đầu tuần 13 ngày kết thúc tuần 14</p>
+            <p>stt 5.Phạm Hoàng Vũ mssv: 22130330 công việc: làm mini scroll bar ở trang sau ngày bắt đầu tuần 13 ngày kết thúc tuần 14</p>
+        </div>
+    </div>
+    <script>
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+        }
+
+        function showMemberList() {
+            document.getElementById("member-list").style.display = "block";
+        }
+    </script>
+</body>
+
+</html>

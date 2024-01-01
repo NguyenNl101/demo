@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="addtocard.css">
+    <title>Add to Cart Form</title>
+</head>
+<body>
+    <div class="cart-form-container">
+        <h1>Add to Cart</h1>
+        <img src="giangsinh.jpg" alt="Product Image">
+        <p>Description of the product...</p>
+        <label for="size">Select Size:</label>
+        <select id="size" name="size">
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <!-- Add more size options as needed -->
+        </select>
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" min="1" value="1">
+        <button onclick="addToCart()">Add to Cart</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

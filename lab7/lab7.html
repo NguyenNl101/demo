@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Website</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      transition: background-color 0.3s ease;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      transition: background-color 0.3s ease;
+    }
+
+    nav {
+      background-color: #444;
+      padding: 10px;
+      text-align: center;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+      margin: 0 10px;
+      display: inline-block;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #4CAF50;
+    }
+
+    section {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .guided-actions {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 20px;
+    }
+
+    .action {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .action:hover {
+      background-color: #45a049;
+    }
+
+    form {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    section img {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 8px;
+      transform: scale(1);
+      transition: transform 0.3s ease;
+      margin-top: 20px;
+    }
+
+    section img:hover {
+      transform: scale(1.1);
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>My Website</h1>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <section>
+    <h2>Contact Us</h2>
+    <p>Follow these guided actions to get started:</p>
+
+    <div class="guided-actions">
+      <button class="action" onclick="showStep('Step 1')">Step 1</button>
+      <button class="action" onclick="showStep('Step 2')">Step 2</button>
+      <button class="action" onclick="showStep('Step 3')">Step 3</button>
+    </div>
+    
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <img src="giangsinh.jpg" alt="Christmas Image">
+  </section>
+
+  <footer>
+    &copy; 2023 My Website. All rights reserved.
+  </footer>
+
+  <script>
+    function showStep(step) {
+      let description = '';
+
+      switch (step) {
+        case 'Step 1':
+          description = 'Step 1 description goes here. This is what you need to do in the first step.';
+          break;
+        case 'Step 2':
+          description = 'Step 2 description goes here. This is what you need to do in the second step.';
+          break;
+        case 'Step 3':
+          description = 'Step 3 description goes here. This is what you need to do in the third step.';
+          break;
+        default:
+          description = 'Invalid step.';
+      }
+
+      document.getElementById('action-description').innerHTML = `<p>${description}</p>`;
+    }
+  </script>
+
+
+</body>
+</html>
